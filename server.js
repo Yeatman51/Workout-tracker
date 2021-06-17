@@ -3,6 +3,7 @@ const logger = require("morgan");
 const mongoose = require("mongoose");
 
 const PORT = process.env.PORT || 3000;
+// const PORT = 3000;
 
 const app = express();
 
@@ -12,13 +13,13 @@ app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
 app.use(express.static("public"));
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/fitness-tracker", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout-tracker", {
     userNewUrlParser: true,
     useFindAndModify: false
 });
 
-require("./routes/htmlroutes")(app);
-require("./routes/apiroutes")(app);
+// require("./routing/display.js")(app);
+// require("./routing/api.js")(app);
 
 app.listen(PORT, () => {
     console.log(`App runing on port ${PORT}`);
