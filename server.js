@@ -18,8 +18,8 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout-tracker
     useFindAndModify: false
 });
 
-// require("./routing/display.js")(app);
-// require("./routing/api.js")(app);
+require("./routing/display.js")(app);
+require("./routing/api.js")(app);
 
 app.listen(PORT, () => {
     console.log(`App runing on port ${PORT}`);
