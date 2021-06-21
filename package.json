@@ -1,16 +1,16 @@
 {
   "name": "workout-tracker",
   "version": "1.0.0",
-  "description": "## Links:",
-  "main": "index.js",
+  "description": "",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "nodemon server.js",
+    "seed": "node seeders/seed.js"
   },
   "repository": {
     "type": "git",
-    "start": "node server.js",
-    "watch": "nodemon server.js",
-    "seed": "node seeders/seed.js",
     "url": "git+https://github.com/Yeatman51/workout-tracker.git"
   },
   "author": "Yeatman51",
@@ -21,6 +21,7 @@
   "homepage": "https://github.com/Yeatman51/workout-tracker#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "mongodb": "^3.6.8",
     "mongoose": "^5.12.13",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.7"

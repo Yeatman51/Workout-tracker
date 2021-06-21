@@ -22,5 +22,5 @@ require("./routing/display.js")(app);
 require("./routing/api.js")(app);
 
 app.listen(PORT, () => {
-    console.log(`App runing on port ${PORT}`);
+    console.log(`server running on port ${PORT}`);
 });
